@@ -1,0 +1,20 @@
+workflows:
+  android:
+    name: Build Android APK
+    environment:
+      flutter: 3.10.6
+    scripts:
+      - flutter pub get
+      - flutter build apk
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+
+  ios:
+    name: Build iOS IPA
+    environment:
+      flutter: 3.10.6
+    scripts:
+      - flutter pub get
+      - flutter build ipa
+    artifacts:
+      - build/ios/iphoneos/app-release.ipa

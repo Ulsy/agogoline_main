@@ -1,0 +1,34 @@
+# Exemple de Podfile pour plusieurs dépendances Flutter
+platform :ios, '9.0'
+
+target 'Runner' do
+  use_frameworks!
+
+  # Pods for Runner
+  pod 'sqflite', '2.3.0'
+  pod 'http', '0.13.5'
+  pod 'image_picker', '0.8.5'
+  pod 'google_maps_flutter', '2.4.0'
+  pod 'location', '5.0.0'
+  pod 'flutter_polyline_points', '1.0.0'
+  pod 'geocoding', '2.1.0'
+  pod 'flutter_google_places', '0.3.0'
+  pod 'flutter_typeahead', '4.6.2'
+  pod 'geolocator', '10.0.0'
+  pod 'flutter_stripe', '9.4.0'
+  pod 'flutter_dotenv', '5.1.0'
+  pod 'stripe_checkout', '1.0.0'
+  pod 'intl', '0.18.1'
+  pod 'url_launcher', '6.1.14'
+  pod 'twilio_flutter', '0.0.9'
+  pod 'flutter_keyboard_visibility', '5.4.1'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+    end
+    flutter_additional_ios_build_settings(target)
+  end
+end

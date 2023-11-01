@@ -1,0 +1,83 @@
+name: agogolines
+description: Project for a taxi.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+
+dependencies:
+  flutter:
+ 
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  sqflite: ^2.3.0
+  http: ^0.13.5
+  image_picker: ^0.8.5
+  get: any
+  google_maps_flutter: ^2.4.0
+  location: ^5.0.0
+  flutter_polyline_points: 1.0.0
+  geocoding: ^2.1.0
+  flutter_google_places: ^0.3.0
+  flutter_typeahead: ^4.6.2
+  geolocator: ^10.0.0
+  flutter_stripe: ^9.4.0
+  flutter_dotenv: ^5.1.0
+  stripe_checkout: ^1.0.0
+  intl: ^0.18.1
+  url_launcher: ^6.1.14
+  twilio_flutter: ^0.0.9
+  flutter_keyboard_visibility: ^5.4.1
+  
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.9.0
+flutter_icons:
+  android: "lancher_icon"
+  ios: true
+  image_path: "web/agogoline-logo.png"
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - web/icons/
+     
+  fonts:
+    - family: Roboto-Bold
+      fonts:
+        - asset: web/fonts/Roboto-Bold.ttf
+    - family: Roboto-Light
+      fonts:
+        - asset: web/fonts/Roboto-Light.ttf
+    - family: Roboto-Medium
+      fonts:
+        - asset: web/fonts/Roboto-Medium.ttf
+    - family: Roboto-Regular
+      fonts:
+        - asset: web/fonts/Roboto-Regular.ttf
+        
+    - family: Montserrat-Light
+      fonts:
+        - asset: web/fonts/Montserrat-Light.ttf
+        
+    - family: Montserrat-Medium
+      fonts:
+        - asset: web/fonts/Montserrat-Medium.ttf
+        
+    - family: Montserrat-Bold
+      fonts:
+        - asset: web/fonts/Montserrat-Bold.ttf
+  
